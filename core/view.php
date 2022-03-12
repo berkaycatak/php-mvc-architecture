@@ -7,6 +7,7 @@ class view
     {
         if (file_exists(VIEWS_PATH . "/" . $file . ".php"))
         {
+            extract($params);
              require_once VIEWS_PATH . "/" . $file . ".php";
         }
         else
